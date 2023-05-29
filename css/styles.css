@@ -216,6 +216,13 @@ img {
 
 /* Navigation menu */
 
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: flex;
+    gap: 40px;
+  }
+}
+
 .menu-item.active {
   position: relative;
   color: var(--hover-color);
@@ -234,11 +241,6 @@ img {
   border-radius: 2px;
 } */
 
-.menu-list {
-  display: flex;
-  gap: 40px;
-}
-
 .menu-item {
   display: block;
   padding-top: 24px;
@@ -252,6 +254,11 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+}
+
+.navigations {
+  display: flex;
+  align-items: center;
 }
 
 .navigations .logo-nav {
