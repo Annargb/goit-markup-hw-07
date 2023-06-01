@@ -1141,6 +1141,7 @@ img {
 
 .card-link {
   display: block;
+  color: var(--white-text-color);
 
   transition-property: box-shadow;
   transition-duration: 250ms;
