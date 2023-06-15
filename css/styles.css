@@ -60,13 +60,16 @@ img {
 /* Header */
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 428px) {
   .container {
-    width: 428px;
+    max-width: 428px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -74,13 +77,13 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
   }
 }
 
@@ -132,8 +135,6 @@ img {
   .mobile-menu-container {
     padding-top: 80px;
     padding-bottom: 40px;
-    padding-left: 25px;
-    padding-right: 20px;
 
     position: relative;
   }
@@ -175,10 +176,9 @@ img {
 /* Mobile menu */
 
 @media screen and (max-width: 767px) {
-  .mobile-menu-container {
-    padding: 80px 35px 40px 40px;
+  .mobile-menu-wrapper > .container {
+    max-width: 383px;
   }
-
   .menu-item-mobile {
     font-weight: 700;
     font-size: 36px;
@@ -205,6 +205,10 @@ img {
   .navigations-mobile {
     margin-bottom: 284px;
   }
+  /* .mobile-fixed-wrap {
+    position: fixed;
+    bottom: 40px;
+  } */
 
   .mobile-contact-menu {
     font-style: normal;
@@ -218,7 +222,7 @@ img {
     line-height: 1.11;
     letter-spacing: 0.02em;
 
-    color: var(--primary-text-color);
+    color: var(--primary-brand-color);
   }
 
   .contact-item-mobile {
@@ -240,13 +244,20 @@ img {
   }
 }
 
-/* .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
+@media screen and (min-width: 428px) and (max-width: 767px) {
 }
+
+@media screen and (max-width: 427px) {
+  .contact-item-mobile-number {
+    font-size: 25px;
+  }
+
+  .social-media-list-mobile.social-media-list {
+    gap: calc((100% - 160px) / 4);
+  }
+}
+
+/* 
 .navigations {
   display: flex;
   align-items: center;
@@ -808,9 +819,8 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .team-members-container {
-    padding-left: 82px;
-    padding-right: 82px;
+  .team-members-cards > .container {
+    max-width: 268px;
   }
 
   .team-member-card:not(:last-child) {
@@ -835,9 +845,8 @@ img {
     row-gap: 64px;
   }
 
-  .team-members-container {
-    padding-left: 108px;
-    padding-right: 108px;
+  .team-members-cards > .container {
+    max-width: 552px;
   }
 }
 
@@ -927,9 +936,8 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-  .customers-container {
-    padding-left: 108px;
-    padding-right: 108px;
+  .customers-section > .container {
+    max-width: 552px;
   }
 }
 
@@ -1285,7 +1293,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 392px;
+  width: 100%;
+  max-width: 392px;
   min-height: 584px;
   padding: 72px 18px 24px 18px;
 
@@ -1494,13 +1503,28 @@ img {
   color: var(--primary-brand-color);
 }
 
-@media screen and (mix-width: 768px) {
+@media screen and (max-width: 428px) {
+  /* .modal {
+    min-width: 392px;
+    min-height: 584px;
+  } */
+}
+
+@media screen and (max-width: 767px) {
   .modal {
-    padding: 72px 25px 24px 23px;
+    overflow-y: scroll;
   }
 }
 
-@media screen and (mix-width: 1158px) {
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 25px 24px 23px;
+    min-width: 408px;
+    min-height: 584px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
   .modal {
     padding: 72px 24px 24px 24px;
   }
